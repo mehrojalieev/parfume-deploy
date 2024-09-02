@@ -14,4 +14,15 @@ router.get('/all',async (req, res) => {
     }
 })
 
+router.post("/create", async (req, res) => {
+    const user = new UsersSchema(req.body)
+    try {
+        
+    } 
+    catch (error) {
+            res.status(500).json({message: error.message})    
+    }   
+
+})
+
 module.exports = router

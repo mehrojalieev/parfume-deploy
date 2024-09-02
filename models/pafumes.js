@@ -9,7 +9,7 @@ const perfumeProductSchema = new mongoose.Schema({
     description: { type: String, required: true },
     category: { type: String, required: true },
     gender: { type: String, required: true }
-});
+}, { strict: true });
 
 const PerfumeProduct = mongoose.model('parfume_products', perfumeProductSchema);
 

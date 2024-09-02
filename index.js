@@ -12,7 +12,7 @@ const mongoose = require('mongoose')
 const PORT = process.env.PORT || 4545
 
 
-mongoose.connect(process.env.MONGODB_CONNECT_URL,  {
+mongoose.connect(process.env.DATABASE_URL,  {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }
@@ -27,7 +27,7 @@ db.once('open', () => console.log('Connected to Database'))
 const parfumeRoutes = require('./routes/parfumes')
 const userRoutes = require("./routes/users")
 
-app.use('/parfumes', parfumeRoutes)
+app.use('/', parfumeRoutes)
 app.use('/users', userRoutes)
 
 

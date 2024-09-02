@@ -11,15 +11,15 @@ const usersSchema = new mongoose.Schema({
     },
     country: {
         type: String,
-        required: true
+        required: false
     },
     email: {
         type: String,
-        required: true
+        required: false
     },
     role: {
         type: String,
-        required: true
+        required: false
     }
 })
 
