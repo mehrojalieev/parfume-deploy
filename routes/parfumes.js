@@ -18,7 +18,8 @@ router.get('/parfumes', async (req, res) => {
 
 
 router.post("/parfume/create", async (req, res) => {
-    const datas  = [{
+    const datas  = [
+        {
       
         "name": "Chanel Coco Mademoiselle Eau de Parfum",
         "brand": "Chanel",
@@ -262,6 +263,7 @@ router.post("/parfume/create", async (req, res) => {
         "name": "Lattafa Hayati",
         "brand": "Hayati",
         "category": "hayati",
+        "price": 300,
         "description": "Hayati, which means \"my life\" or \"my beloved\" in Arabic, is a captivating and romantic fragrance designed to evoke feelings of passion and sensuality. It is a floral oriental perfume that opens with a burst of citrusy freshness, mingling with the sweet and spicy notes of cinnamon and saffron.",
         "images": [
           "https://avatars.mds.yandex.net/get-mpic/9067823/2a0000018bfc8a56924a65eaa29b58ce8664/optimize",
