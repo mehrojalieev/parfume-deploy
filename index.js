@@ -12,7 +12,7 @@ const mongoose = require('mongoose')
 const PORT = process.env.PORT || 4545
 
 
-mongoose.connect(process.env.DATABASE_URL,  {
+mongoose.connect('mongodb+srv://mekhrojdev:ZA4XGDqZgL8V7jZx@mymongodv.ytxha.mongodb.net/mymongodv?retryWrites=true&w=majority',  {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }
