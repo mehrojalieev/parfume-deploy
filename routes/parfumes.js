@@ -19,9 +19,7 @@ router.get('/parfumes', async (req, res) => {
 
 router.post("/parfume/create", async (req, res) => {
     const datas  = [{
-        "_id": {
-          "$oid": "6631b30a09869c758cdc618f"
-        },
+      
         "name": "Chanel Coco Mademoiselle Eau de Parfum",
         "brand": "Chanel",
         "images": [
@@ -34,9 +32,7 @@ router.post("/parfume/create", async (req, res) => {
         "gender": "men"
       },
       {
-        "_id": {
-          "$oid": "6631b58509869c758cdc6190"
-        },
+     
         "brand": "Dolce & Gabbana",
         "category": "dolce",
         "description": "A fresh, floral and fruity fragrance capturing the essence of the Mediterranean",
@@ -50,9 +46,7 @@ router.post("/parfume/create", async (req, res) => {
         "gender": "men"
       },
       {
-        "_id": {
-          "$oid": "6631bac909869c758cdc6192"
-        },
+        
         "name": "Yves Saint Laurent Black Opium Eau de Parfum",
         "brand": "Yves Saint Laurent",
         "category": "yves",
@@ -67,9 +61,7 @@ router.post("/parfume/create", async (req, res) => {
         "gender": "men"
       },
       {
-        "_id": {
-          "$oid": "6631c2f8e4518689e4c9c516"
-        },
+    
         "name": "Gucci Bloom",
         "brand": "Gucci",
         "category": "gucci",
@@ -84,9 +76,7 @@ router.post("/parfume/create", async (req, res) => {
         "gender": "men"
       },
       {
-        "_id": {
-          "$oid": "6631e8aee989fe91844a5904"
-        },
+        
         "name": "Dior Sauvage",
         "brand": "Dior",
         "category": "dior",
@@ -101,9 +91,7 @@ router.post("/parfume/create", async (req, res) => {
         "gender": "men"
       },
       {
-        "_id": {
-          "$oid": "6631ead8c9dc8f7b0210d3cc"
-        },
+       
         "name": "Dior Sauvage",
         "brand": "dior",
         "category": "dior",
@@ -117,9 +105,7 @@ router.post("/parfume/create", async (req, res) => {
         ]
       },
       {
-        "_id": {
-          "$oid": "6631ead8c9dc8f7b0210d3cd"
-        },
+        
         "name": "Versace Bright Crystal",
         "brand": "Versace",
         "category": "versache",
@@ -133,9 +119,7 @@ router.post("/parfume/create", async (req, res) => {
         ]
       },
       {
-        "_id": {
-          "$oid": "6631ee11c9dc8f7b0210d3cf"
-        },
+     
         "name": " Dior Dior Homme (2020) 100 мл",
         "brand": "Dior",
         "category": "dior",
@@ -149,9 +133,7 @@ router.post("/parfume/create", async (req, res) => {
         ]
       },
       {
-        "_id": {
-          "$oid": "6631ee11c9dc8f7b0210d3d0"
-        },
+       
         "name": "Versace Men's Versace Pour Homme",
         "brand": "Versace",
         "category": "versace",
@@ -165,9 +147,7 @@ router.post("/parfume/create", async (req, res) => {
         ]
       },
       {
-        "_id": {
-          "$oid": "6631ee11c9dc8f7b0210d3d1"
-        },
+       
         "name": "Versace Pour Homme 2008",
         "brand": "Versace",
         "category": "versace",
@@ -181,9 +161,7 @@ router.post("/parfume/create", async (req, res) => {
         ]
       },
       {
-        "_id": {
-          "$oid": "6631ee11c9dc8f7b0210d3d2"
-        },
+       
         "name": "Hugo Boss Bottled",
         "brand": "Hugo Boss",
         "category": "hugo_boss",
@@ -197,9 +175,7 @@ router.post("/parfume/create", async (req, res) => {
         ]
       },
       {
-        "_id": {
-          "$oid": "6631ee11c9dc8f7b0210d3d3"
-        },
+       
         "name": "Dior Forever And Eve",
         "brand": "Dior",
         "category": "dior",
@@ -211,9 +187,7 @@ router.post("/parfume/create", async (req, res) => {
         ]
       },
       {
-        "_id": {
-          "$oid": "6633256f6ec9820f4890e9a9"
-        },
+       
         "name": "Hermes  Voyage d'Hermes Parfum",
         "brand": "Hermes",
         "category": "hermes",
@@ -228,9 +202,7 @@ router.post("/parfume/create", async (req, res) => {
         "gender": "men"
       },
       {
-        "_id": {
-          "$oid": "6633256f6ec9820f4890e9aa"
-        },
+        
         "name": "Byredo Bal d'Afrique ",
         "brand": "Byredo",
         "category": "byredo",
@@ -244,9 +216,7 @@ router.post("/parfume/create", async (req, res) => {
         ]
       },
       {
-        "_id": {
-          "$oid": "6633256f6ec9820f4890e9ab"
-        },
+       
         "name": "Creed Aventus",
         "brand": "Creed",
         "category": "creed",
@@ -260,9 +230,7 @@ router.post("/parfume/create", async (req, res) => {
         ]
       },
       {
-        "_id": {
-          "$oid": "6633256f6ec9820f4890e9ac"
-        },
+      
         "name": "BOSS CLUB Priority",
         "brand": "Boss",
         "category": "boss",
@@ -276,9 +244,7 @@ router.post("/parfume/create", async (req, res) => {
         ]
       },
       {
-        "_id": {
-          "$oid": "6633256f6ec9820f4890e9ad"
-        },
+        
         "name": "Hugo Boss Bottled  Eau de Parfum",
         "brand": "Hugo Boss",
         "category": "hugo_boss",
@@ -292,9 +258,7 @@ router.post("/parfume/create", async (req, res) => {
         ]
       },
       {
-        "_id": {
-          "$oid": "6633268eda6d23037201c140"
-        },
+        
         "name": "Lattafa Hayati",
         "brand": "Hayati",
         "category": "hayati",
@@ -306,9 +270,7 @@ router.post("/parfume/create", async (req, res) => {
         ]
       },
       {
-        "_id": {
-          "$oid": "666d2a2cd907a3b5e235dfd5"
-        },
+        
         "name": "Carlo Bossi",
         "brand": "Carlo",
         "description": "The fragrance opens with accords of grapefruit, bergamot, lemon and elemi. The heart of the composition contains notes of vetiver, ginger and cedar. The trail is represented by nuances of sandalwood, rosemary and lavender.",
@@ -321,9 +283,7 @@ router.post("/parfume/create", async (req, res) => {
         ]
       },
       {
-        "_id": {
-          "$oid": "666d2a2cd907a3b5e235dfd6"
-        },
+        
         "name": "RM San Francisco Blue",
         "brand": "San Francisco",
         "description": "Perfume for men San Francisco Blue is a stylish and multifaceted men's fragrance, built on the modern sound of citrus and aquatic notes in a halo of spices, woody chords and velvety cappuccino. Top notes of bergamot, black currant, mint and melon combine with heart notes of ocean accord, cardamom and nutmeg. Base notes of amber, oakmoss, woody notes and cappuccino give the fragrance depth and longevity.",
@@ -338,9 +298,7 @@ router.post("/parfume/create", async (req, res) => {
         ]
       },
       {
-        "_id": {
-          "$oid": "666d2a2cd907a3b5e235dfd7"
-        },
+        
         "name": "CASH",
         "brand": "Cash",
         "description": "Perfect harmony between freshness and an erotic bottom note, marked by a warm woody accord.",
@@ -356,9 +314,7 @@ router.post("/parfume/create", async (req, res) => {
         ]
       },
       {
-        "_id": {
-          "$oid": "666d2cb8231b4328b0c9eeab"
-        },
+        
         "name": "AVON Stamina for Women",
         "brand": "Avon",
         "description": "Stamina Avon is a worthy representative of the Avon fragrant boutique! This scent is amazing and inimitable. Stamina is different in that it sounds special on every representative of the fair sex, emphasizing natural femininity and beauty! Stamina is the best gift for any woman! It's no secret that with every fragrance, as with every man, a woman reveals herself differently, showing different facets of her Self. Avon Stamina will help you reveal your inner strength and give you a huge charge of positive energy! The scent of Stamina attracts the attention of men to its owner and gives confidence in her attractiveness!",
@@ -374,9 +330,7 @@ router.post("/parfume/create", async (req, res) => {
         ]
       },
       {
-        "_id": {
-          "$oid": "666d2cb8231b4328b0c9eeac"
-        },
+       
         "name": " Hugo Boss женская Boss Ma Vie Pour Femme 75 мл",
         "brand": "Hugo Boss",
         "description": "",
@@ -393,9 +347,7 @@ router.post("/parfume/create", async (req, res) => {
         ]
       },
       {
-        "_id": {
-          "$oid": "666d2cd8231b4328b0c9eead"
-        },
+      
         "name": "AVON Stamina for Women",
         "brand": "Avon",
         "description": "Stamina Avon is a worthy representative of the Avon fragrant boutique! This scent is amazing and inimitable. Stamina is different in that it sounds special on every representative of the fair sex, emphasizing natural femininity and beauty! Stamina is the best gift for any woman! It's no secret that with every fragrance, as with every man, a woman reveals herself differently, showing different facets of her Self. Avon Stamina will help you reveal your inner strength and give you a huge charge of positive energy! The scent of Stamina attracts the attention of men to its owner and gives confidence in her attractiveness!",
@@ -411,9 +363,7 @@ router.post("/parfume/create", async (req, res) => {
         ]
       },
       {
-        "_id": {
-          "$oid": "666d2cd8231b4328b0c9eeae"
-        },
+        
         "name": " Hugo Boss женская Boss Ma Vie Pour Femme 75 мл",
         "brand": "Hugo Boss",
         "description": "",
