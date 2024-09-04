@@ -6,7 +6,10 @@ const ParfumeSchema = require('../models/pafumes')
 router.get('/parfumes', async (req, res) => {
     try {
         const parfumes = await ParfumeSchema.find()
-        res.send(parfumes)
+        res.send({
+            data: parfumes,
+            success: true
+        })
     }
     catch (error) {
         res.status(500).json({ message: error.message })
