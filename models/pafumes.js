@@ -11,6 +11,6 @@ const perfumeProductSchema = new mongoose.Schema({
     gender: { type: String, required: true }
 }, { strict: true });
 
-const PerfumeProduct = mongoose.model('parfume_products', perfumeProductSchema);
+const PerfumeProduct = mongoose.model('perfumes', perfumeProductSchema);
 
 module.exports = PerfumeProduct;
