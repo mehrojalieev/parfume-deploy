@@ -430,8 +430,11 @@ router.post("/parfume/create", async (req, res) => {
         ]
       }]
     try {
-        ParfumeSchema.insertMany(datas)
-        res.status(201).json({meesage: "Successfully added"});
+        const alldata = await ParfumeSchema.insertMany(datas);
+        res.status(201).json({
+            success: true,
+            data: alldata
+        });
     } catch (error) {
         res.status(400).json({ message: error.message });
     }
