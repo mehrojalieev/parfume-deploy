@@ -368,7 +368,7 @@ router.post("/parfume/create", async (req, res) => {
         
         "name": " Hugo Boss женская Boss Ma Vie Pour Femme 75 мл",
         "brand": "Hugo Boss",
-        "description": "",
+        "description": "Hugo",
         "category": "hugo_boss",
         "gender": "women",
         "price": 20.1,
