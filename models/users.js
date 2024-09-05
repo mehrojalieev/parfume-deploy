@@ -9,19 +9,24 @@ const usersSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    country: {
+    username: {
         type: String,
-        required: false
+        required: true
     },
+    password: {
+        type: String,
+        required: true
+    },
+
     email: {
         type: String,
-        required: false
+        required: true
     },
     role: {
         type: String,
         required: false
     }
-})
+}, {strict: true})
 
 const Users = mongoose.model("users", usersSchema)
 

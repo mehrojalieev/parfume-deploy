@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const UsersSchema = require('../models/users');
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcrypt");
 
 // GET all users
 router.get('/all', async (req, res) => {
@@ -25,15 +27,83 @@ router.get("/:id", async (req, res) => {
 
 // POST create a new user
 router.post("/create", async (req, res) => {
-    const user = new UsersSchema(req.body);
-    
-
     try {
-        const newUser = await UsersSchema.insertMany(user);
-        res.status(201).json(newUser);
+        const newUser = {
+            firstname: req.body.firstname,
+            lastname: req.body.lastname,
+            username: req.body.username,
+            email: req.body.email,
+            password: req.body.password
+        };
+
+        // Check if username already exists
+        const existingUser = await UsersSchema.findOne({
+            $or: [{ username: newUser.username }, { email: newUser.email }]
+        });
+
+        if (existingUser) {
+            return res.status(400).json({ message: "Username or email already exists" });
+        }
+
+        // Hash the password
+        const saltRounds = 10;
+        const hashedPassword = await bcrypt.hash(newUser.password, saltRounds);
+        newUser.password = hashedPassword;
+
+        // Save the new user
+        const userData = await UsersSchema.create(newUser);
+
+        res.status(201).json({
+            success: true,
+            data: userData,
+            message: "User registered successfully"
+        });
     } catch (error) {
-        res.status(400).json({ message: error.message });
+        res.status(500).json({ message: error.message });
     }
 });
 
+
+
+const JWT_SECRET = "Yh28$s%45jh6hU(*&^KJ(&(*kjhdSJ(&*hsdb273j";
+
+router.post("/login", async (req, res) => {
+    const { username, password } = req.body;
+
+    try {
+        // Check if the user exists in the database
+        const user = await UsersSchema.findOne({ username: username });
+        if (!user) {
+            return res.status(400).json({ message: "Invalid username or password" });
+        }
+
+        // Compare the password with the hashed password stored in the database
+        const isMatch = await bcrypt.compare(password, user.password);
+        if (!isMatch) {
+            return res.status(400).json({ message: "Invalid username or password" });
+        }
+
+        // Create a JWT token
+        const token = jwt.sign(
+            {
+                id: user._id,
+                firstname: user.firstname,
+                lastname: user.lastname,
+                username: user.username,
+                email: user.email,
+
+            },
+            JWT_SECRET, {
+            expiresIn: "10d" 
+        });
+
+        // Send token in response
+        res.status(200).json({
+            message: "Login successful",
+            token: token
+        });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
 module.exports = router;
