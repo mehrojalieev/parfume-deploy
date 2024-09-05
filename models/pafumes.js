@@ -6,9 +6,9 @@ const perfumeProductSchema = new mongoose.Schema({
     brand: { type: String, required: true },
     images: { type: [String], required: true },
     price: { type: Number, required: true },
-    description: { type: String,  },
+    description: { type: String, },
     category: { type: String, required: true },
-    gender: { type: String,  }
+    gender: { type: String, }
 }, { strict: true });
 
 const PerfumeProduct = mongoose.model("perfumes", perfumeProductSchema);
