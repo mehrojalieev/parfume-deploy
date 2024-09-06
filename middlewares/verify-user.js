@@ -1,4 +1,4 @@
-const token = false 
+const token = true 
 
 function verify_user(request, response, next) {
     if(token) {
