@@ -21,7 +21,7 @@ router.get('/parfumes', verify_user, async (req, res) => {
 router.post("/parfume/create", async (req, res) => {
   const datas = req.body
   try {
-    const alldata = await ParfumeSchema.insertMany(datas);
+    const alldata = datas.save()
     res.status(201).json({
       success: true,
       data: alldata
@@ -84,3 +84,7 @@ router.delete("/parfume/delete/:id", async (req, res) => {
 
 
 module.exports = router
+
+
+
+

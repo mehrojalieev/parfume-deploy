@@ -43,7 +43,7 @@ router.post("/create", async (req, res) => {
 
         if (existingUser) {
             return res.status(400).json({ message: "Username or email already exists" });
-        }
+        }   
 
         // Hash the password
         const saltRounds = 10;
@@ -65,7 +65,6 @@ router.post("/create", async (req, res) => {
 
 
 
-const JWT_SECRET = "Yh28$s%45jh6hU(*&^KJ(&(*kjhdSJ(&*hsdb273j";
 
 router.post("/login", async (req, res) => {
     const { username, password } = req.body;
@@ -83,19 +82,14 @@ router.post("/login", async (req, res) => {
             return res.status(400).json({ message: "Invalid username or password" });
         }
 
-        // Create a JWT token
-        const token = jwt.sign(
-            {
-                id: user._id,
-                firstname: user.firstname,
-                lastname: user.lastname,
-                username: user.username,
-                email: user.email,
-
-            },
-            JWT_SECRET, {
-            expiresIn: "10d" 
-        });
+        const userJwt = {
+            id: user._id,
+            firstname: user.firstname,
+            lastname: user.lastname,
+            username: user.username,
+            email: user.email
+        }
+        const token = jwt.sign(userJwt, process.env.JWT_SECRET, { expiresIn: "10d" });
 
         // Send token in response
         res.status(200).json({
